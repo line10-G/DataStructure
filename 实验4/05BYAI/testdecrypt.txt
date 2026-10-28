@@ -1,0 +1,9 @@
+Data Structure -- Lab 5: File Encryption
+20252660 Xu Zichao
+
+第一行：异或加密就是把每个字节与密钥做一次 ^ 运算。
+第二行：因为 a ^ k ^ k = a，所以加密和解密是同一段代码。
+
+回车(13)和换行(10)必须原样保留，否则解密后全文会挤成一行。
+ASCII: The quick brown fox jumps over the lazy dog. 0123456789
+末行故意不带换行符，用于检查文件结尾是否被吞。
