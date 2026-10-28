@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="05BYAI 交互演示 FileCryptTest" type="Application" factoryName="Application" folderName="实验4-05">
+    <option name="MAIN_CLASS_NAME" value="FileCryptTest" />
+    <module name="05BYAI" />
+    <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

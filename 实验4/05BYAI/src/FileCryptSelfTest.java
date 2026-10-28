@@ -6,7 +6,7 @@ import java.nio.file.Paths;
 import java.util.Arrays;
 
 /**
- * 实验5 自动自检：对文本文件执行「加密 → 解密」并逐字节验证还原是否完全正确。
+ * 实验4-05 自检：对文本文件执行「加密 → 解密」并逐字节验证还原是否完全正确。
  *
  * <p>与 {@link FileCryptTest} 的分工：FileCryptTest 是给人看的交互式演示，
  * 用来截图；本类不需要任何输入，自己造数据、自己断言，用来证明实现正确。</p>
@@ -52,7 +52,7 @@ public class FileCryptSelfTest {
         Path enc = dir.resolve("testencrypt.txt");
         Path dec = dir.resolve("testdecrypt.txt");
 
-        banner("实验5  文本文件加密解密自检");
+        banner("实验4-05  文本文件加密解密自检");
         System.out.println("工作目录：" + Paths.get("").toAbsolutePath());
         System.out.println("输出目录：" + dir + "   ← 三个 txt 都生成在这里");
         System.out.println("单字节密钥 KEY     = " + KEY + "  (0x"
@@ -357,27 +357,19 @@ public class FileCryptSelfTest {
      * 而工作目录由运行配置决定——IDEA 默认是项目根目录（实验4），
      * 命令行从 src 下运行则是 src，两种情况都会把文件生成到模块外面去。</p>
      *
-     * <p>这里用模块的 .iml 文件当"锚点"逐级查找，三种常见启动位置都能命中：</p>
+     * <p>这里用模块的 .iml 文件当"锚点"查找，四种常见启动位置都能命中：</p>
      * <ol>
      *   <li>工作目录就是 05BYAI  → 直接命中</li>
      *   <li>工作目录是项目根 实验4 → 向下找到 05BYAI</li>
      *   <li>工作目录是 05BYAI\src → 向上找到 05BYAI</li>
+     *   <li>工作目录是更上层的工程根 实验项目报告 → 向下浅层搜索命中 实验4\05BYAI</li>
      * </ol>
      */
     private static Path moduleRoot() {
         Path cwd = Paths.get("").toAbsolutePath();
 
-        // 1. 自己就是模块根
-        if (Files.isRegularFile(cwd.resolve(MODULE_MARKER))) {
-            return cwd;
-        }
-        // 2. 向下找一层（工作目录是项目根）
-        Path child = cwd.resolve(MODULE_DIR_NAME);
-        if (Files.isRegularFile(child.resolve(MODULE_MARKER))) {
-            return child;
-        }
-        // 3. 向上逐级找（工作目录是 src 或更深的目录）
-        for (Path p = cwd.getParent(); p != null; p = p.getParent()) {
+        // 1. 向上逐级找（自己、父级、祖父级……），顺带看每层的 05BYAI 子目录
+        for (Path p = cwd; p != null; p = p.getParent()) {
             if (Files.isRegularFile(p.resolve(MODULE_MARKER))) {
                 return p;
             }
@@ -386,8 +378,16 @@ public class FileCryptSelfTest {
                 return sub;
             }
         }
-        // 4. 兜底：仍然用工作目录，但会给出警告
-        System.out.println("  [警告] 未找到 " + MODULE_MARKER + "，文件将生成在工作目录：" + cwd);
-        return cwd;
+        // 2. 向下浅层找：工程根下面隔着 实验4 一层，靠这一步兜住
+        try (java.util.stream.Stream<Path> walk = Files.walk(cwd, 3)) {
+            return walk.filter(f -> MODULE_MARKER.equals(String.valueOf(f.getFileName())))
+                       .map(Path::getParent)
+                       .findFirst()
+                       .orElse(cwd);
+        } catch (IOException e) {
+            // 3. 兜底：仍然用工作目录，但会给出警告
+            System.out.println("  [警告] 未找到 " + MODULE_MARKER + "，文件将生成在工作目录：" + cwd);
+            return cwd;
+        }
     }
 }

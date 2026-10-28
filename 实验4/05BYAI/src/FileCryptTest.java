@@ -5,7 +5,7 @@ import java.nio.file.Paths;
 import java.util.Scanner;
 
 /**
- * 实验5 设计性实验：文本文件加密解密演示程序（交互式）。
+ * 实验4-05 设计性实验：文本文件加密解密演示程序（交互式）。
  *
  * <p>运行后按菜单选择加密或解密，依次输入源文件名、目标文件名和密钥，
  * 程序完成变换并输出结果提示。加密与解密共用同一套异或逻辑。</p>
@@ -141,21 +141,20 @@ public class FileCryptTest {
     }
 
     /**
-     * 定位模块根目录：以 {@code 05BYAI.iml} 为锚点，依次尝试
-     * "工作目录本身 → 工作目录的直接子目录 → 逐级向上查找"，
-     * 这样无论 IDEA 把工作目录设成项目根还是模块根，都能落到 {@code 05BYAI}。
+     * 定位模块根目录：以 {@code 05BYAI.iml} 为锚点。
+     *
+     * <p>IDEA 从代码行号旁启动程序时，工作目录可能是模块根 {@code 05BYAI}、
+     * 项目根 {@code 实验4}、更上层的工程根 {@code 实验项目报告}，
+     * 也可能是 {@code src}。四种情况都靠这里落到 {@code 05BYAI}：</p>
+     * <ol>
+     *   <li>向上逐级查找（覆盖模块根、src、实验4 三种）</li>
+     *   <li>向下浅层查找（覆盖工作目录是工程根、模块被套在 实验4 下的情况）</li>
+     * </ol>
      */
     private static Path moduleRoot() {
         Path cwd = Paths.get("").toAbsolutePath();
 
-        if (Files.isRegularFile(cwd.resolve(MODULE_MARKER))) {
-            return cwd;
-        }
-        Path child = cwd.resolve(MODULE_DIR_NAME);
-        if (Files.isRegularFile(child.resolve(MODULE_MARKER))) {
-            return child;
-        }
-        for (Path up = cwd.getParent(); up != null; up = up.getParent()) {
+        for (Path up = cwd; up != null; up = up.getParent()) {
             if (Files.isRegularFile(up.resolve(MODULE_MARKER))) {
                 return up;
             }
@@ -164,7 +163,15 @@ public class FileCryptTest {
                 return sub;
             }
         }
-        return cwd;                                 // 兜底
+        // 向下找：工程根下面隔着 实验4 一层，靠向下浅层搜索兜住
+        try (java.util.stream.Stream<Path> walk = Files.walk(cwd, 3)) {
+            return walk.filter(f -> MODULE_MARKER.equals(String.valueOf(f.getFileName())))
+                       .map(Path::getParent)
+                       .findFirst()
+                       .orElse(cwd);
+        } catch (IOException e) {
+            return cwd;                             // 兜底
+        }
     }
 
     /**

@@ -104,14 +104,7 @@ public class FileCryptTestV2 {
     private static Path moduleRoot(){
         Path cwd = Paths.get("").toAbsolutePath();
 
-        if (Files.isRegularFile(cwd.resolve(MODULE_MARKER))) {
-            return cwd;
-        }
-        Path child = cwd.resolve(MODULE_DIR_NAME);
-        if (Files.isRegularFile(child.resolve(MODULE_MARKER))) {
-            return child;
-        }
-        for (Path up = cwd.getParent(); up != null; up = up.getParent()) {
+        for (Path up = cwd; up != null; up = up.getParent()) {
             if (Files.isRegularFile(up.resolve(MODULE_MARKER))) {
                 return up;
             }
@@ -120,7 +113,15 @@ public class FileCryptTestV2 {
                 return sub;
             }
         }
-        return cwd;
+        // 向下浅层找：工作目录是上层工程根时，模块被套在 实验4 目录里
+        try (java.util.stream.Stream<Path> walk = Files.walk(cwd, 3)) {
+            return walk.filter(f -> MODULE_MARKER.equals(String.valueOf(f.getFileName())))
+                       .map(Path::getParent)
+                       .findFirst()
+                       .orElse(cwd);
+        } catch (IOException e) {
+            return cwd;
+        }
     }
     private static void reportMissing(Path src) {
         Path cwd = Paths.get("").toAbsolutePath();
