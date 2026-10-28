@@ -5,7 +5,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-public class Decoder {
+public class FileCryptV1 {
     public static void decode(String inputPath, String outputPath, int key) throws IOException {
         if (key <= 0) {
             throw new IllegalArgumentException("密钥必须是正整数：" + key);

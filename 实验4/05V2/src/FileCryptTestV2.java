@@ -4,7 +4,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Scanner;
 
-public class FileCryptTest {
+public class FileCryptTestV2 {
     private static final Scanner IN = new Scanner(System.in);
 
     private static final String MODULE_MARKER = "05V2.iml";
@@ -33,8 +33,8 @@ public class FileCryptTest {
         }
 
         try {
-            byte[] keyBytes = FileCrypt.keyBytes(keyText);
-            FileCrypt.xorFile(src, dst, keyBytes);
+            byte[] keyBytes = FileCryptV2.keyBytes(keyText);
+            FileCryptV2.xorFile(src, dst, keyBytes);
         } catch (IllegalArgumentException e) {
             System.out.println("错误：" + e.getMessage());
             return;

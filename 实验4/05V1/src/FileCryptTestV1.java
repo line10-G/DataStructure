@@ -1,7 +1,7 @@
 import java.io.IOException;
 import java.util.Scanner;
 
-public class DecoderTest {
+public class FileCryptTestV1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("文本文件加密解密演示程序");
@@ -16,7 +16,7 @@ public class DecoderTest {
         int key = askKey(scanner, operation);
 
         try {
-            Decoder.decode(inputPath, outputPath, key);
+            FileCryptV1.decode(inputPath, outputPath, key);
         } catch (IllegalArgumentException e) {
             System.out.println("错误：" + e.getMessage());
             return;

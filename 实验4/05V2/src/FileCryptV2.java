@@ -5,10 +5,10 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-public final class FileCrypt {
+public final class FileCryptV2 {
 
     private static final int BUF_SIZE = 8192;
-    private FileCrypt(){
+    private FileCryptV2(){
     }
 
     public static void xorFile(Path src, Path dst, int key) throws IOException{
