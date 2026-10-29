@@ -1,7 +1,0 @@
-piublic class kmp{
-	// 模式匹配的KMP 算法
-	public int indexKMP(SeqString s, SeqString t, int begin){
-		int[] next = getNext(t);
-		int i = begin;
-		int j = 0;
-		while(i<s.length() && j<t.length()){

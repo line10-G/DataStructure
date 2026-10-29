@@ -2,36 +2,38 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/实验2/01/01.iml" filepath="$PROJECT_DIR$/实验2/01/01.iml" />
-      <module fileurl="file://$PROJECT_DIR$/实验4/01/010.iml" filepath="$PROJECT_DIR$/实验4/01/010.iml" />
-      <module fileurl="file://$PROJECT_DIR$/实验4/02/011.iml" filepath="$PROJECT_DIR$/实验4/02/011.iml" />
-      <module fileurl="file://$PROJECT_DIR$/实验3/07/012.iml" filepath="$PROJECT_DIR$/实验3/07/012.iml" />
-      <module fileurl="file://$PROJECT_DIR$/实验3/06/013.iml" filepath="$PROJECT_DIR$/实验3/06/013.iml" />
-      <module fileurl="file://$PROJECT_DIR$/实验3/09/014.iml" filepath="$PROJECT_DIR$/实验3/09/014.iml" />
-      <module fileurl="file://$PROJECT_DIR$/实验1/04/015.iml" filepath="$PROJECT_DIR$/实验1/04/015.iml" />
-      <module fileurl="file://$PROJECT_DIR$/实验3/08/016.iml" filepath="$PROJECT_DIR$/实验3/08/016.iml" />
-      <module fileurl="file://$PROJECT_DIR$/实验3/03/017.iml" filepath="$PROJECT_DIR$/实验3/03/017.iml" />
-      <module fileurl="file://$PROJECT_DIR$/实验1/02/018.iml" filepath="$PROJECT_DIR$/实验1/02/018.iml" />
-      <module fileurl="file://$PROJECT_DIR$/实验3/02/019.iml" filepath="$PROJECT_DIR$/实验3/02/019.iml" />
-      <module fileurl="file://$PROJECT_DIR$/实验4/01BYAI/01BYAI.iml" filepath="$PROJECT_DIR$/实验4/01BYAI/01BYAI.iml" />
-      <module fileurl="file://$PROJECT_DIR$/实验2/02/02.iml" filepath="$PROJECT_DIR$/实验2/02/02.iml" />
-      <module fileurl="file://$PROJECT_DIR$/实验3/05/020.iml" filepath="$PROJECT_DIR$/实验3/05/020.iml" />
-      <module fileurl="file://$PROJECT_DIR$/实验3/04/021.iml" filepath="$PROJECT_DIR$/实验3/04/021.iml" />
-      <module fileurl="file://$PROJECT_DIR$/实验1/01/022.iml" filepath="$PROJECT_DIR$/实验1/01/022.iml" />
-      <module fileurl="file://$PROJECT_DIR$/实验3/01/023.iml" filepath="$PROJECT_DIR$/实验3/01/023.iml" />
-      <module fileurl="file://$PROJECT_DIR$/实验4/02BYAI/02BYAI.iml" filepath="$PROJECT_DIR$/实验4/02BYAI/02BYAI.iml" />
-      <module fileurl="file://$PROJECT_DIR$/实验4/03/03.iml" filepath="$PROJECT_DIR$/实验4/03/03.iml" />
-      <module fileurl="file://$PROJECT_DIR$/实验1/03_V1/03_V1.iml" filepath="$PROJECT_DIR$/实验1/03_V1/03_V1.iml" />
-      <module fileurl="file://$PROJECT_DIR$/实验1/03_V2/03_V2.iml" filepath="$PROJECT_DIR$/实验1/03_V2/03_V2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/实验4/04/04.iml" filepath="$PROJECT_DIR$/实验4/04/04.iml" />
-      <module fileurl="file://$PROJECT_DIR$/实验4/05BYAI/05BYAI.iml" filepath="$PROJECT_DIR$/实验4/05BYAI/05BYAI.iml" />
-      <module fileurl="file://$PROJECT_DIR$/实验4/05V1/05V1.iml" filepath="$PROJECT_DIR$/实验4/05V1/05V1.iml" />
-      <module fileurl="file://$PROJECT_DIR$/实验4/05V2/05V2.iml" filepath="$PROJECT_DIR$/实验4/05V2/05V2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/实验2/05/05.iml" filepath="$PROJECT_DIR$/实验2/05/05.iml" />
-      <module fileurl="file://$PROJECT_DIR$/实验2/06/06.iml" filepath="$PROJECT_DIR$/实验2/06/06.iml" />
-      <module fileurl="file://$PROJECT_DIR$/实验2/07/07.iml" filepath="$PROJECT_DIR$/实验2/07/07.iml" />
-      <module fileurl="file://$PROJECT_DIR$/实验2/04/08.iml" filepath="$PROJECT_DIR$/实验2/04/08.iml" />
-      <module fileurl="file://$PROJECT_DIR$/实验2/03/09.iml" filepath="$PROJECT_DIR$/实验2/03/09.iml" />
+      <module fileurl="file://$PROJECT_DIR$/实验1/0101/0101.iml" filepath="$PROJECT_DIR$/实验1/0101/0101.iml" />
+      <module fileurl="file://$PROJECT_DIR$/实验1/0102/0102.iml" filepath="$PROJECT_DIR$/实验1/0102/0102.iml" />
+      <module fileurl="file://$PROJECT_DIR$/实验1/0103V1/0103V1.iml" filepath="$PROJECT_DIR$/实验1/0103V1/0103V1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/实验1/0103V2/0103V2.iml" filepath="$PROJECT_DIR$/实验1/0103V2/0103V2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/实验1/0104/0104.iml" filepath="$PROJECT_DIR$/实验1/0104/0104.iml" />
+      <module fileurl="file://$PROJECT_DIR$/实验2/0201/0201.iml" filepath="$PROJECT_DIR$/实验2/0201/0201.iml" />
+      <module fileurl="file://$PROJECT_DIR$/实验2/0202/0202.iml" filepath="$PROJECT_DIR$/实验2/0202/0202.iml" />
+      <module fileurl="file://$PROJECT_DIR$/实验2/0203/0203.iml" filepath="$PROJECT_DIR$/实验2/0203/0203.iml" />
+      <module fileurl="file://$PROJECT_DIR$/实验2/0204/0204.iml" filepath="$PROJECT_DIR$/实验2/0204/0204.iml" />
+      <module fileurl="file://$PROJECT_DIR$/实验2/0205/0205.iml" filepath="$PROJECT_DIR$/实验2/0205/0205.iml" />
+      <module fileurl="file://$PROJECT_DIR$/实验2/0206/0206.iml" filepath="$PROJECT_DIR$/实验2/0206/0206.iml" />
+      <module fileurl="file://$PROJECT_DIR$/实验2/0207/0207.iml" filepath="$PROJECT_DIR$/实验2/0207/0207.iml" />
+      <module fileurl="file://$PROJECT_DIR$/实验3/0301/0301.iml" filepath="$PROJECT_DIR$/实验3/0301/0301.iml" />
+      <module fileurl="file://$PROJECT_DIR$/实验3/0302/0302.iml" filepath="$PROJECT_DIR$/实验3/0302/0302.iml" />
+      <module fileurl="file://$PROJECT_DIR$/实验3/0303/0303.iml" filepath="$PROJECT_DIR$/实验3/0303/0303.iml" />
+      <module fileurl="file://$PROJECT_DIR$/实验3/0304/0304.iml" filepath="$PROJECT_DIR$/实验3/0304/0304.iml" />
+      <module fileurl="file://$PROJECT_DIR$/实验3/0305/0305.iml" filepath="$PROJECT_DIR$/实验3/0305/0305.iml" />
+      <module fileurl="file://$PROJECT_DIR$/实验3/0306/0306.iml" filepath="$PROJECT_DIR$/实验3/0306/0306.iml" />
+      <module fileurl="file://$PROJECT_DIR$/实验3/0307/0307.iml" filepath="$PROJECT_DIR$/实验3/0307/0307.iml" />
+      <module fileurl="file://$PROJECT_DIR$/实验3/0308/0308.iml" filepath="$PROJECT_DIR$/实验3/0308/0308.iml" />
+      <module fileurl="file://$PROJECT_DIR$/实验3/0309/0309.iml" filepath="$PROJECT_DIR$/实验3/0309/0309.iml" />
+      <module fileurl="file://$PROJECT_DIR$/实验4/0401/0401.iml" filepath="$PROJECT_DIR$/实验4/0401/0401.iml" />
+      <module fileurl="file://$PROJECT_DIR$/实验4/0401BYAI/0401BYAI.iml" filepath="$PROJECT_DIR$/实验4/0401BYAI/0401BYAI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/实验4/0402/0402.iml" filepath="$PROJECT_DIR$/实验4/0402/0402.iml" />
+      <module fileurl="file://$PROJECT_DIR$/实验4/0402BYAI/0402BYAI.iml" filepath="$PROJECT_DIR$/实验4/0402BYAI/0402BYAI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/实验4/0403/0403.iml" filepath="$PROJECT_DIR$/实验4/0403/0403.iml" />
+      <module fileurl="file://$PROJECT_DIR$/实验4/0404/0404.iml" filepath="$PROJECT_DIR$/实验4/0404/0404.iml" />
+      <module fileurl="file://$PROJECT_DIR$/实验4/0405BYAI/0405BYAI.iml" filepath="$PROJECT_DIR$/实验4/0405BYAI/0405BYAI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/实验4/0405V1/0405V1.iml" filepath="$PROJECT_DIR$/实验4/0405V1/0405V1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/实验4/0405V2/0405V2.iml" filepath="$PROJECT_DIR$/实验4/0405V2/0405V2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/实验5/0501/0501.iml" filepath="$PROJECT_DIR$/实验5/0501/0501.iml" />
+      <module fileurl="file://$PROJECT_DIR$/实验5/0502/0502.iml" filepath="$PROJECT_DIR$/实验5/0502/0502.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/实验项目报告.iml" filepath="$PROJECT_DIR$/.idea/实验项目报告.iml" />
     </modules>
   </component>

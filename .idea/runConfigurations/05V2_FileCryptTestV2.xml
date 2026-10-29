@@ -1,7 +1,7 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="05V2 交互演示 FileCryptTestV2" type="Application" factoryName="Application" folderName="实验4-05">
     <option name="MAIN_CLASS_NAME" value="FileCryptTestV2" />
-    <module name="05V2" />
+    <module name="0405V2" />
     <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
     <method v="2">
       <option name="Make" enabled="true" />
